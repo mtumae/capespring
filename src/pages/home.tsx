@@ -5,7 +5,13 @@ export default function Home(){
         <>
             <NavBar></NavBar>
 
-            <img src="public/bio.png"></img>
+            <div className="grid grid-cols-2 m-10 g-5 w-full">
+                <img src="public/capespringlogo.jpg"/>
+                <img className="-mt-10" src="public/bio.png" />
+            </div>
+
+
+            
     
         </>
     )
