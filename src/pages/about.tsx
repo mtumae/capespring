@@ -1,6 +1,6 @@
 import Footer from "../components/footer";
 import NavBar from "../components/navigation";
-import ImgUrl from "/prizefighter1.png"
+
 
 
 export default function About(){

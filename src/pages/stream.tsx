@@ -1,3 +1,4 @@
+import Footer from "../components/footer";
 import NavBar from "../components/navigation";
 
 const covers = [
@@ -24,6 +25,7 @@ export default function Stream(){
                 )
             })}
             </div>
+            <Footer></Footer>
         </div>
     )
 }
