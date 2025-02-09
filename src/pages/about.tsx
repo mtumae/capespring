@@ -7,7 +7,7 @@ export default function About(){
     return(
         <div>
             <NavBar></NavBar>
-            <div className="flex m-10 g-5 justify-self-center">
+            <div className="flex m-20 g-5 justify-self-center">
             <section className="w-1/2 text-lg">
             capespring. is ever-evolving. The Nairobi-born artist has fostered a close relationship with music from a young age, teaching himself to produce at the age of 13.
 
