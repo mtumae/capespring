@@ -2,9 +2,11 @@ import { Link } from "react-router-dom"
 
 export default function NavBar(){
     return(
-         <ul className="justify-self-center flex text-5xl gap-10 m-10 ">
+        <>
+         <ul className="justify-self-center flex text-2xl gap-10 m-10 ">
             <li>
-                 <Link to="/">home</Link>
+                 <Link to="/"><img className="w-1/2" src="public/capespringlogo.jpg"/></Link>
+
             </li>
             <li>
                 <Link to="/about">about</Link>
@@ -15,6 +17,9 @@ export default function NavBar(){
             <li>
                 <Link to="/gallery">gallery</Link>
             </li>
+        
         </ul>
+       
+        </>
     )
 }
