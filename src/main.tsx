@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from './pages/home.tsx'
 import Stream from './pages/stream.tsx'
 import About from './pages/about.tsx'
