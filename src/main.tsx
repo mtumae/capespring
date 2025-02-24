@@ -1,10 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Home from './pages/home.tsx'
+import Home from './pages/home.jsx'
 import Stream from './pages/stream.tsx'
 import About from './pages/about.tsx'
-import Gallery from './pages/gallery.tsx'
+import Gallery from './pages/gallery.js'
 
 import './index.css'
 
