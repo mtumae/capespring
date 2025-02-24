@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { integer, pgTable, pgTableCreator, timestamp, varchar } from "drizzle-orm/pg-core";
+import { integer, pgTableCreator, timestamp, varchar } from "drizzle-orm/pg-core";
 
 
 export const createTable = pgTableCreator((name) => `capespring${name}`);

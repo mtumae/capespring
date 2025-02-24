@@ -1,4 +1,7 @@
-import {drizzle} from 'drizzle-orm/neon-http'
+//import {drizzle} from 'drizzle-orm/neon-http'
 
 
-const db = drizzle(import.meta.env.VITE_DATABASE_URL)
+//const db = drizzle(import.meta.env.VITE_DATABASE_URL)
+
+
+//emptiness

@@ -4,8 +4,7 @@ import Footer from "../components/footer"
 import NavBar from "../components/navigation"
 import { BiCheck } from "react-icons/bi";
 import { drizzle } from 'drizzle-orm/neon-http';
-import { eq } from 'drizzle-orm';
-import { commentsTable, usersTable } from '../db/schema';
+import { commentsTable } from '../db/schema';
 
 import {getComments} from "../api/comments";
 
