@@ -82,7 +82,7 @@ export default function Home(){
                     {
                         comment()
                     }
-                }} onChange={e => setMsg(e.currentTarget.value)} className=" w-full border border-[#6b6a6a] p-3 focus:outline-0 rounded-lg text-black shadow-sm" placeholder="Leave a comment"></input>}
+                }} onChange={e => setMsg(e.currentTarget.value)} className=" w-full bg-gray-50  p-3 focus:outline-0 rounded-lg text-black " placeholder="Leave a comment"></input>}
                 {error && <p className="text-red-500 text-xs mt-3">{error}</p>}
             </div>
  
