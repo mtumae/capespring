@@ -17,7 +17,6 @@ const covers = [
 export default function Stream() {
     return (
         <div className="w-full">
-            <NavBar />
             <div className="flex w-auto flex-col sm:flex-row gap-2 items-center sm:items-start justify-center">
                 {covers.map(cover => (
                     <a key={cover.id} href={cover.link} className="sm:w-auto">
@@ -29,7 +28,7 @@ export default function Stream() {
                     </a>
                 ))}
             </div>
-            <Footer />
+        
         </div>
     );
 }

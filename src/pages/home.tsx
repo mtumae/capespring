@@ -40,8 +40,6 @@ export default function Home(){
             setLoading(false)
         }
     }
-
-
     useEffect(()=>{
         async function getData(){
             if(loading){
