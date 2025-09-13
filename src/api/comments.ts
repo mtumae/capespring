@@ -9,8 +9,8 @@ const db = drizzle(import.meta.env.VITE_DATABASE_URL)
 
 
 export async function getComments(){
-        const data = await db.select().from(commentsTable).orderBy(commentsTable.createdAt)
-        return data
+        const data = await db.select().from(commentsTable).orderBy(commentsTable.id)
+        return data ?? null
 }
 
 export async function addComment(commentNew:string){

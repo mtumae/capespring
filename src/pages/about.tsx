@@ -1,12 +1,9 @@
-import Footer from "../components/footer";
-import NavBar from "../components/navigation";
-
 
 
 export default function About() {
     return (
         <div>
-            <NavBar />
+      
             <div className="flex flex-col sm:flex-row p-4 sm:p-10 gap-6 sm:gap-10 items-center w-full sm:items-start justify-self-center">
                 <section className="w-full sm:w-1/2 text-base sm:text-lg mb-4 sm:mb-0">
                     capespring. is ever-evolving. The Nairobi-born artist has fostered a close relationship with music from a young age, teaching himself to produce at the age of 13.
@@ -24,7 +21,7 @@ export default function About() {
                 </section>
                 <img className="w-full sm:w-1/2 max-w-xs sm:max-w-none rounded shadow-md object-cover" src="capespring.jpg" alt="capespring portrait" />
             </div>
-            <Footer />
+       
         </div>
     );
 }
