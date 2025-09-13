@@ -1,5 +1,3 @@
-import Footer from "../components/footer";
-import NavBar from "../components/navigation";
 
 const covers = [
     {id:'1',name:'2020.jpg', alt:'2020 cover', link:'https://open.spotify.com/album/7106h5eEzFFzF2SQCiazrn'},
