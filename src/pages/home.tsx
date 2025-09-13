@@ -1,60 +1,63 @@
-
-import { useState } from "react";
+"use client"
+import { useEffect, useState } from "react";
 import Footer from "../components/footer"
 import NavBar from "../components/navigation"
-import { BiCheck } from "react-icons/bi";
-import { drizzle } from 'drizzle-orm/neon-http';
-import { commentsTable } from '../db/schema';
-
-import {getComments} from "../api/comments";
+//import { BiCheck } from "react-icons/bi";
+import { getComments, addComment } from "../api/comments"
 
 
-const post = await getComments();
-
-const db = drizzle(import.meta.env.VITE_DATABASE_URL)
-
+interface comment{
+    id: number;
+    comment: string;
+    createdAt: Date;
+    likes: number|null;
+}
 
 
 export default function Home(){
-    const [commentNew, SetCommentNew] = useState('')
-    
-    async function addComment(){
-        const comment: typeof commentsTable.$inferInsert = {
-            comment: commentNew
+    const [msg, setMsg] =useState('')
+    const [newcomments, setNewComments] = useState<comment[]|null[]>([])
+
+
+    async function comment(){
+        if(msg.length > 0){
+            await addComment(msg)
         }
-        await db.insert(commentsTable).values(comment)
-        console.log("Lets go, it worked!")
     }
 
+
+    useEffect(()=>{
+        getComments().then((data)=>{
+            setNewComments(data)
+        })
+    }, [msg])
 
     return(
         <>
             <NavBar></NavBar>
             <iframe className="m-10 w-3/4 justify-self-center shadow-lg rounded-lg" src="https://open.spotify.com/embed/track/0xMaU17or2mTPbGGyM9eqU?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-         
-              
-                <div className="m-20 text-sm">
-
-                    {post.map((data)=>(
-                        <>
-                        <a key={data.id}>{data.comment}</a><br></br>
-                        </>
-
-                    ))}
-
-                    
-
-                    <a className="border-b-2 border-b-blue-950 font-bold">{commentNew}</a><br></br>
-                   
-
-                   
-                    <input onChange={e => SetCommentNew(e.target.value)} className=" w-auto p-1 mt-20 mr-10 shadow-md rounded-md " placeholder="say something nice..."></input>
-                    <button onClick={addComment} className="p-2 rounded-md shadow-md text-sm hover:border-stone-300 hover:shadow-lg "><BiCheck/></button>
-                   
-                  
-                </div>
-                
-              
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-1 m-10">
+            {newcomments && newcomments.length > 0 ? (
+                newcomments.map((c, index) => (
+                    <div key={index} className="transition-shadow duration-300 text-xs text-gray-700">
+                        <p className="text-sm ">{c?.comment}</p>
+                    </div>
+                ))
+            ) : (
+                <p className="m-10 text-sm text-gray-500">No comments.</p>
+            )}
+               </div>
+            <div className="p-10 text-sm">
+                <input 
+                onKeyDown={e => {
+                    if(e.key === 'Enter')
+                    {
+                        console.log(e.currentTarget.value)
+                        setMsg(e.currentTarget.value)
+                        comment()
+                    }
+                }} className=" w-full border border-gray-700 p-2 focus:outline-0 rounded-lg text-gray-500 shadow-sm" placeholder="Leave a comment"></input>
+            </div>
             <Footer></Footer>
         </>
     )

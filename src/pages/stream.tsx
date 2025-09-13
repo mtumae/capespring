@@ -14,18 +14,22 @@ const covers = [
 ]
 
 
-export default function Stream(){
-    return(
-        <div>
-            <NavBar></NavBar>
-            <div className="flex m-10 g-5 ">
-            {covers.map(cover => {
-                return(
-                    <a key={cover.id} href={cover.link}><img alt={cover.alt} src={"covers/"+cover.name}  /></a>
-                )
-            })}
+export default function Stream() {
+    return (
+        <div className="w-full">
+            <NavBar />
+            <div className="flex w-auto flex-col sm:flex-row gap-2 items-center sm:items-start justify-center">
+                {covers.map(cover => (
+                    <a key={cover.id} href={cover.link} className="sm:w-auto">
+                        <img
+                            alt={cover.alt}
+                            src={"covers/" + cover.name}
+                            className="max-w-xs sm:w-40 sm:max-w-none rounded shadow-md transition-transform hover:scale-105 duration-200"
+                        />
+                    </a>
+                ))}
             </div>
-            <Footer></Footer>
+            <Footer />
         </div>
-    )
+    );
 }

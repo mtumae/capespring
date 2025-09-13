@@ -20,6 +20,7 @@ export const commentsTable = createTable("post",{
     createdAt: timestamp("created_at", { withTimezone: true })
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),
-    //likes: integer().default(0)
+    likes: integer().default(0)
   });
+
 
