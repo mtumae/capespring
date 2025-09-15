@@ -19,7 +19,7 @@ export default function About() {
                     Later on in high school, through being enrolled in music class, the young doyen was given access to Logic. “I asked my music teacher, “Can you hook me up with a version of logic?” And that's still the same one I use today,” he recounts.
                     The release of berries which was his official introduction to releasing music professionally. - <a href="https://tangazamagazine.com/features/2021/3/20/capespring-releases-diodrama" className="font-bold hover:underline">capesprings diodrama encourages us to find peace within ourselves - Monica Kemoli Savanne</a>
                 </section>
-                <img className="w-full sm:w-1/2 max-w-xs sm:max-w-none rounded shadow-md object-cover" src="capespring.jpg" alt="capespring portrait" />
+                <img className="w-full sm:w-1/2 max-w-xs sm:max-w-none shadow-md object-cover" src="capespring.jpg" alt="capespring portrait" />
             </div>
        
         </div>

@@ -1,9 +1,9 @@
 
 export default function Gallery(){
     return(
-        <div>
+        <div className=" p-10">
           
-            <h1>Gallery</h1>
+            <img src="prizefighter1.png" alt="prizefighter1" className=""/>
         </div>
     )
 }
