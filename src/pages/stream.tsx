@@ -21,7 +21,7 @@ export default function Stream() {
                         <img
                             alt={cover.alt}
                             src={"covers/" + cover.name}
-                            className="max-w-xs sm:w-40 sm:max-w-none rounded shadow-md transition-transform hover:scale-105 duration-200"
+                            className="max-w-xs sm:w-40 sm:max-w-none  shadow-md transition-transform hover:scale-105 duration-200"
                         />
                     </a>
                 ))}

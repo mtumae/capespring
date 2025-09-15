@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 //import { BiCheck } from "react-icons/bi";
 import { getComments, addComment } from "../api/comments"
+import Stream from "./stream";
+
 
 
 interface commentType{
@@ -74,7 +76,10 @@ export default function Home(){
              {loading && <p className="text-sm text-gray-500">Loading...</p> }
             
             </div>
-            <div className="p-10 text-sm">
+
+            <Stream />
+
+            <div className="p-20 text-sm">
                 {loading?null:
                 <input 
                 onKeyDown={e => {

@@ -11,7 +11,7 @@ export default function NavBar() {
                 </Link>
                 <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-10">
                     <Link to="/about" className="hover:underline">about</Link>
-                    <Link to="/stream" className="hover:underline">stream</Link>
+          
                     <Link to="/gallery" className="hover:underline">gallery</Link>
                     <a className="text-sky-500 hover:underline" href='https://www.gofundme.com/f/help-me-fund-my-spring-semester-at-calarts'>donate</a>
                 </div>
