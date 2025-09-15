@@ -63,7 +63,8 @@ export default function Home(){
 
     return(
         <>
-            <iframe className="m-10 w-3/4 justify-self-center shadow-lg rounded-lg" src="https://open.spotify.com/embed/track/0xMaU17or2mTPbGGyM9eqU?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe className="p-10 w-3/4 justify-self-center" src="https://open.spotify.com/embed/track/0xMaU17or2mTPbGGyM9eqU?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+             <Stream />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-1 p-10">
             {newcomments? (newcomments.map((c, i) => (
                     <div key={i} className="transition-shadow duration-300 text-xs text-gray-700">
@@ -74,11 +75,8 @@ export default function Home(){
                 <p className="m-10 text-sm text-gray-500">No comments.</p>
             )}
              {loading && <p className="text-sm text-gray-500">Loading...</p> }
-            
             </div>
-
-            <Stream />
-
+           
             <div className="p-20 text-sm">
                 {loading?null:
                 <input 
