@@ -77,7 +77,8 @@ export default function Home(){
              {loading && <p className="text-sm text-gray-500">Loading...</p> }
             </div>
            
-            <div className="p-20 text-sm">
+            <div className="grid p-20 text-sm">
+                <label className="text-gray-500">Leave a comment</label>
                 {loading?null:
                 <input 
                 onKeyDown={e => {
@@ -85,8 +86,8 @@ export default function Home(){
                     {
                         comment()
                     }
-                }} onChange={e => setMsg(e.currentTarget.value)} className=" w-full bg-gray-50  p-3 focus:outline-0 rounded-lg text-black " placeholder="Leave a comment"></input>}
-                {error && <p className="text-red-500 text-xs mt-3">{error}</p>}
+                }} onChange={e => setMsg(e.currentTarget.value)} className={`${error? 'border-red-500 text-red-500':'border-gray-500'} border shadow-sm p-3 focus:outline-0 rounded-lg text-black`}></input>}
+                {error && <p className="text-red-500 text-xs mt-3 transition-all duration-500 ">{error}</p>}
             </div>
  
         </>
