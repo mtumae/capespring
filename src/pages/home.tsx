@@ -63,7 +63,7 @@ export default function Home(){
 
     return(
         <>
-            <iframe className="p-10 w-3/4 justify-self-center" src="https://open.spotify.com/embed/track/0xMaU17or2mTPbGGyM9eqU?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe className="p-10 w-full justify-self-center" src="https://open.spotify.com/embed/track/0xMaU17or2mTPbGGyM9eqU?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
              <Stream />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-1 p-10">
             {newcomments? (newcomments.map((c, i) => (
